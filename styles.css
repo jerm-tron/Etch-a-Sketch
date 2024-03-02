@@ -1,5 +1,29 @@
-*{box-sizing: border-box;
-margin:0;
-padding:0;
-border:1px solid red;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  width: 700px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.squares {
+  height: 40px;
+  width: 40px;
+  padding: 20px;
+  flex-grow: 1;
 }
