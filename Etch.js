@@ -1,4 +1,5 @@
 const container = document.querySelector("#container");
+//const gridDivs = document.querySelectorAll(".squares");
 /* creating a grid thats 16 x 16 */
 
 function standardGrid() {
@@ -8,4 +9,14 @@ function standardGrid() {
     container.appendChild(divs);
   }
 }
-standardGrid()
+standardGrid();
+
+const gridDivs = document.querySelectorAll(".squares");
+
+[...gridDivs].forEach((divs) => {
+  divs.addEventListener("mouseover", onHoverTurnBlack);
+});
+
+function onHoverTurnBlack(e) {
+  e.target.style.backgroundColor = "black";
+}
