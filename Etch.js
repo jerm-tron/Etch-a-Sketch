@@ -5,15 +5,17 @@ const container = document.querySelector("#container");
 function standardGrid(number) {
   for (let i = 0; i < number * number; i++) {
     let divs = document.createElement("div");
-    divs.style.width = 700 / number + "px";
-    divs.style.height = 700 / number + "px";
+    divs.style.width = Math.round(100 / number) + '%';
+    divs.style.height = Math.round(100 / number) + '%';
     divs.classList.add("squares");
     container.appendChild(divs);
     console.log("finish  creating square");
   }
 }
-console.log("creating my first divs");
 standardGrid(16);
+
+console.log("creating my first divs");
+standardGrid();
 console.log("created");
 
 console.log("selecting all my divs");
@@ -41,7 +43,7 @@ function newGrid() {
     console.log("run standard div function with the amount user inputted");
     standardGrid(number);
     console.log("funcrtion called with user amount of divs");
-    let newDivs = gridDivs = document.querySelectorAll(".squares");
+    let newDivs = (gridDivs = document.querySelectorAll(".squares"));
     console.log("for each div run onHoverTurnBlack");
     [...gridDivs].forEach((divs) => {
       divs.addEventListener("mouseover", onHoverTurnBlack);
