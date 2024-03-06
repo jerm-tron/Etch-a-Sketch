@@ -5,8 +5,8 @@ const container = document.querySelector("#container");
 function standardGrid(number) {
   for (let i = 0; i < number * number; i++) {
     let divs = document.createElement("div");
-    divs.style.width = Math.round(100 / number) + '%';
-    divs.style.height = Math.round(100 / number) + '%';
+    divs.style.width = (100 / number) + '%';
+    divs.style.height = (100 / number) + '%';
     divs.classList.add("squares");
     container.appendChild(divs);
     console.log("finish  creating square");
